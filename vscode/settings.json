@@ -1,0 +1,8 @@
+{
+    // Visual
+    "editor.rulers": [80],
+
+    // On save
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+}

@@ -1,0 +1,55 @@
+{
+	// Place your workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Doxygen file header": {
+		"prefix": "doxheader",
+		"body": [
+			"${BLOCK_COMMENT_START}",
+			" * @file   ${TM_FILENAME}",
+			" * @author Antonio Teixeira",
+			" * @date   ${CURRENT_MONTH_NAME_SHORT} ${CURRENT_DATE}, ${CURRENT_YEAR}",
+			" ${BLOCK_COMMENT_END}",
+			"\n$0"
+		],
+		"description": "Doxygen file header"
+	},
+
+	"C/C++ include guards": {
+		"scope": "c,cpp",
+		"prefix": "cguards",
+		"body": [
+			"#ifndef ${TM_FILENAME/(.*)(\\.)(.*)/_${1:/upcase}_${3:/upcase}_/}",
+			"#define ${TM_FILENAME/(.*)(\\.)(.*)/_${1:/upcase}_${3:/upcase}_/}",
+			"\n\n$0\n\n",
+			"#endif // ${TM_FILENAME/(.*)(\\.)(.*)/_${1:/upcase}_${3:/upcase}_/}",
+			"\n"
+		],
+		"description": "Add include guards to a file"
+	},
+
+	"Register mask": {
+		"scope": "cpp",
+		"prefix": "regmsk",
+		"body": [
+			"static constexpr uint8_t $1_OFFSET = $2;",
+			"static constexpr uint8_t $1_LEN = $3;",
+			"static constexpr uint32_t $1_MASK = (((1 << $1_LEN) - 1) << $1_OFFSET);"
+		],
+		"description": "Make a register bitwise mask"
+	}
+}
