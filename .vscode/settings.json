@@ -1,0 +1,26 @@
+{
+    // GLOBAL SETTINGS ---------------------------------------------------------
+
+    // On save
+    "files.trimTrailingWhitespace": true,
+
+    // LANGUAGE SPECIFIC SETTINGS ----------------------------------------------
+
+    "[c]": {
+        // Visual
+        "editor.rulers": [80],
+
+        // On save
+        "files.trimFinalNewlines": true,
+        "files.insertFinalNewline": true,
+    },
+
+    "[cpp]": {
+        // Visual
+        "editor.rulers": [80],
+
+        // On save
+        "files.trimFinalNewlines": true,
+        "files.insertFinalNewline": true,
+    }
+}
