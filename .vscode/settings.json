@@ -1,26 +1,37 @@
 {
-    // GLOBAL SETTINGS ---------------------------------------------------------
-
-    // On save
-    "files.trimTrailingWhitespace": true,
-
-    // LANGUAGE SPECIFIC SETTINGS ----------------------------------------------
-
     "[c]": {
-        // Visual
         "editor.rulers": [80],
 
-        // On save
         "files.trimFinalNewlines": true,
         "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true
     },
 
     "[cpp]": {
-        // Visual
         "editor.rulers": [80],
 
-        // On save
         "files.trimFinalNewlines": true,
         "files.insertFinalNewline": true,
-    }
+        "files.trimTrailingWhitespace": true
+    },
+
+    "[python]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.rulers": [100],
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true
+    },
+
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleArgs": ["--max-line-length=100"]
 }
