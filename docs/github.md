@@ -19,4 +19,4 @@ If the repo is already present, just apply the `core.sshCommand` config to it:
 /my-repo $ git config core.sshCommand "ssh -i ~/.ssh/my-key"
 ```
 
-[Source](https://superuser.com/a/912281)
+- [Source](https://superuser.com/a/912281)
